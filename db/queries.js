@@ -14,7 +14,7 @@ export const selectId = async (id) =>
 export const addPerson = async (name, age) =>
   new Promise((resolve, reject) => {
     db.query(
-      "INSERT INTO people (name, age) VALUES (coalesce(?, name), coalesce(?, name))",
+      "INSERT INTO people (name, age) VALUES (coalesce(?, name), coalesce(?, age))",
       [name, age],
       (err, results) => {
         if (err) {

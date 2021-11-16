@@ -7,7 +7,7 @@ import {
   updatePerson,
 } from "../db/queries.js";
 
-export const router = express.Router();
+const router = express.Router();
 
 router.get("/people", async (req, res) => {
   const people = await getPeople();
